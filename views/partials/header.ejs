@@ -6,7 +6,31 @@
   <title>Secrets</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-social.css" >
   <link rel="stylesheet" href="css/styles.css">
+
+  <script type="text/javascript">
+  // Remove the ugly Facebook appended hash
+// <https://github.com/jaredhanson/passport-facebook/issues/12>
+if (window.location.hash && window.location.hash === "#_=_") {
+  // If you are not using Modernizr, then the alternative is:
+  //   `if (window.history && history.replaceState) {`
+  if (window.history && history.replaceState) {
+    window.history.replaceState("", document.title, window.location.pathname);
+  } else {
+    // Prevent scrolling by storing the page's current scroll offset
+    var scroll = {
+      top: document.body.scrollTop,
+      left: document.body.scrollLeft
+    };
+    window.location.hash = "";
+    // Restore the scroll offset, should be flicker free
+    document.body.scrollTop = scroll.top;
+    document.body.scrollLeft = scroll.left;
+  }
+}
+</script>
+
 </head>
 
 <body>
